@@ -1,4 +1,4 @@
-## Linux Server
+# Linux Server
 
 Installed Linux Ubuntu on a virtual machine and prepared it to host a web application. Updated, secured, installed/configured web and database servers.
 
