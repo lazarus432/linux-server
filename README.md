@@ -69,7 +69,7 @@ Installed Linux Ubuntu on a virtual machine and prepared it to host a web applic
 
 1. Create catalog.conf file in sites-available directory using `sudo nano /etc/apache2/sites-available/catalog.conf` command.
 2. Added the following:
-`
+```
 <VirtualHost *:80>
                 ServerName 52.14.253.36
                 ServerAdmin admin@52.14.253.36
@@ -88,14 +88,14 @@ Installed Linux Ubuntu on a virtual machine and prepared it to host a web applic
                 LogLevel warn
                 CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
-`
+```
 3. Enabled host using command `sudo a2ensite catalog.conf`
 
 ## Create WSGI File
 
 1. Create catalog.wsgi file insite www directory using `sudo nano /var/www/catalog/catalog.wsgi`.
 2. Added the following:
-`
+```
 #!/usr/bin/python
 import sys
 import logging
@@ -104,7 +104,7 @@ sys.path.insert(0,"/var/www/catalog/")
 
 from catalog import app as application
 application.secret_key = 'super_secret_key'
-`
+```
 3. Restart apache using `sudo service apache2 restart`.
 4. Run __init__.py using `sudo python __init__.py`.
 
